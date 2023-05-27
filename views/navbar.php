@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Agregar empleado</a>
+          <a class="nav-link active" aria-current="page" href="./login.php">Agregar empleado</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Detalles salario</a>
