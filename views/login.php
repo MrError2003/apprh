@@ -1,4 +1,13 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <title>Registro e inicio de sesión</title>
+</head>
+ <body>
+ <div class="container">
   <div class="row">
     
     <div class="tab-pane fade" id="register">
@@ -24,4 +33,7 @@
     </div>
 
   </div>
-</div
+</div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
