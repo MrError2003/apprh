@@ -1,5 +1,14 @@
-<?php
-include 'conexion.php';
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php
+        include 'head.php'
+    ?>
+</head>
+<body>
+    <?php
+include './conexion.php';
 if(isset($_POST['signin'])){
 $nombre=$_POST['nombre']; //escampar el input en una variable    
 $identificacion=$_POST['identificacion'];
@@ -21,3 +30,6 @@ if($insert){
 }
 }
 ?>
+</body>
+</html>
+
