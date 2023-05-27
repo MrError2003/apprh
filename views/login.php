@@ -37,7 +37,7 @@
           </div>
           <div class="tab-pane fade" id="register">
             <h3 class="mb-4">Registrarse</h3>
-            <form action="/controller/signin.php">
+            <form method="post" action="/controller/signin.php">
               <div class="mb-3">
                 <label for="registerName" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="registerName" placeholder="Nombre">
