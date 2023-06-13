@@ -53,35 +53,33 @@
                 <label for="area">Área:</label>
                 <input type="text" class="form-control" id="area" name="area" required>
             </div>
-            <!--<div class="form-group">
+            <div class="form-group">
                 <label for="tipocontrato">Tipo de Contrato:</label>
-                <input type="text" class="form-control" id="tipocontrato" name="tipocontrato" required>
-            </div>-->
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Seleccione tipo de contrato</option>
-                <option value="Fijo">Termino fijo</option>
-                <option value="Indefinido">Termino indefinido</option>
-                <option value="Obra o labor">Obra o labor</option>
-                <option value="Medio tiempo">Medio tiempo</option>
-                <option value="Practicante">Practicante</option>
-                <option value="Pasantia">Pasantia</option>
-            </select>
+                <select class="form-control" id="tipocontrato" name="tipocontrato" required>
+                    <option selected>Seleccione tipo de contrato</option>
+                    <option value="Fijo">Termino fijo</option>
+                    <option value="Indefinido">Termino indefinido</option>
+                    <option value="Obra o labor">Obra o labor</option>
+                    <option value="Medio tiempo">Medio tiempo</option>
+                    <option value="Practicante">Practicante</option>
+                    <option value="Pasantia">Pasantia</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="salariobruto">Salario Bruto:</label>
                 <input type="number" class="form-control" id="salariobruto" name="salariobruto" required>
             </div>
             <div class="form-group">
+                <label for="prestaciones">Prestaciones:</label>
+                <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo $prestaciones; ?>" readonly>
+            </div>
+            <div class="form-group">
                 <label for="recargos">Recargos:</label>
                 <input type="number" class="form-control" id="recargos" name="recargos" required>
             </div>
-            <!--<div class="form-group">
-                <label for="prestaciones">Prestaciones:</label>
-                <input type="number" class="form-control" id="prestaciones" name="prestaciones" required>
-            </div>-->
             <div class="form-group">
                 <label for="salarioneto">Salario Neto:</label>
                 <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo $salarioneto; ?>" readonly>
-                <!--<input type="number" class="form-control" id="salarioneto" name="salarioneto" required>-->
             </div>
             <button type="submit" class="btn btn-primary" name="registrar">Registrar cargo</button>
             <br>

@@ -3,7 +3,46 @@
     <div class="col-md-6">
       <div class="tab-pane fade" id="register">
         <h3 class="mb-4">Registro nuevo empleado</h3>
-        <!-- Código PHP -->
+
+        <?php
+            include '../controller/conexion.php';
+
+            if (isset($_POST['registrar'])) {
+                $tipodocumento = $_POST['tipodocumendo'];
+                $identificacion = $_POST['documento'];
+                $nombres = $_POST['nombres'];
+                $apellidos = $_POST['apellidos'];
+                $cargo = $_POST['cargo'];
+                $email = $_POST['email'];
+                $telefono = $_POST['telefono'];
+                $telefonocontacto = $_POST['contacto'];
+                $direccion = $_POST['direccion'];
+                $barrio = $_POST['barrio'];
+                $municipiociudad = $_POST['municipiociudad'];
+                $departamento = $_POST['departamento'];
+                $eps = $_POST['eps'];
+                $arl = $_POST['arl'];
+                $cajacompensacion = $_POST['cajacompensacion'];
+                $pension = $_POST['pension'];
+                $fechaingreso = $_POST['ingreso'];
+                $fechacreacion = date("Y-m-d");
+                $estado = "ACTIVO";
+
+                $insert = mysqli_query($con, "INSERT INTO empleados (tipodocumento, identificacion, nombres, apellidos, cargo, email, telefono, telefonocontacto, direccion, barrio, municipiociudad, departamento, eps, arl, cajacompensacion, pension, fechaingreso, fechacreacion, estado)
+                                 VALUES ('$tipodocumento', '$identificacion', '$nombres', '$apellidos', '$cargo', '$email', '$telefono', '$telefonocontacto', '$direccion', '$barrio', '$municipiociudad', '$departamento', '$eps', '$arl', '$cajacompensacion', '$pension', '$fechaingreso', '$fechacreacion', '$estado')");
+                if ($insert) {
+                    echo '<div class="alert alert-success" role="alert">
+                DATOS GUARDADOS CON ÉXITO
+                <a href="../index.php" class="btn btn-warning">REGRESAR AL INICIO</a>
+              </div>';
+                } else {
+                    echo "Error al guardar los datos: " . mysqli_error($con);
+                }
+            }
+
+            mysqli_close($con);
+            ?>
+
       </div>
 
       <form method="post">
