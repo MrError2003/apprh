@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Registro de Cargos</title>
+    
 </head>
 
 <div class="tab-pane fade" id="register">
