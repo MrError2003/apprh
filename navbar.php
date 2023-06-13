@@ -10,6 +10,9 @@
           <a class="nav-link active" aria-current="page" href="./views/registro.php">Registro Usuario</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./views/registrocargo.php">Registro Cargo</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./views/nuevoempleado.php">Registro empleado</a>
         </li>
         <li class="nav-item">
