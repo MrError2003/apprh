@@ -16,6 +16,10 @@
                 $email = $_POST['email'];
                 $telefono = $_POST['telefono'];
                 $telefonocontacto = $_POST['contacto'];
+                $direccion = $_POST['direccion'];
+                $barrio = $_POST['barrio'];
+                $municipiociudad = $_POST['municipiociudad'];
+                $departamento = $_POST['departamento'];
                 $eps = $_POST['eps'];
                 $arl = $_POST['arl'];
                 $cajacompensacion = $_POST['cajacompensacion'];
@@ -24,9 +28,8 @@
                 $fechacreacion = date("Y-m-d");
                 $estado = "ACTIVO";
 
-                $insert = mysqli_query($con, "INSERT INTO empleados (tipodocumento, identificacion, nombres, apellidos, cargo, email, telefono, telefonocontacto, eps, arl, cajacompensacion, pension, fechaingreso, fechacreacion, estado)
-                                 VALUES ('$tipodocumento', '$identificacion', '$nombres', '$apellidos', '$cargo', '$email', '$telefono', '$telefonocontacto', '$eps', '$arl', '$cajacompensacion', '$pension', '$fechaingreso', '$fechacreacion', '$estado')");
-
+                $insert = mysqli_query($con, "INSERT INTO empleados (tipodocumento, identificacion, nombres, apellidos, cargo, email, telefono, telefonocontacto, direccion, barrio, municipiociudad, departamento, eps, arl, cajacompensacion, pension, fechaingreso, fechacreacion, estado)
+                                 VALUES ('$tipodocumento', '$identificacion', '$nombres', '$apellidos', '$cargo', '$email', '$telefono', '$telefonocontacto', '$direccion', '$barrio', '$municipiociudad', '$departamento', '$eps', '$arl', '$cajacompensacion', '$pension', '$fechaingreso', '$fechacreacion', '$estado')");
                 if ($insert) {
                     echo '<div class="alert alert-success" role="alert">
                 DATOS GUARDADOS CON ÉXITO
@@ -98,6 +101,11 @@
                 <label for="registerName" class="form-label">Municipio o ciudad</label>
                 <br>
                 <input type="text" class="form-control" id="city" placeholder="Lugar de residencia" name="municipiociudad" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Departamento</label>
+                <br>
+                <input type="text" class="form-control" id="departamento" placeholder="Departamento de residencia" name="departamento" required>
             </div>
             <div class="mb-3">
                 <label for="registerName" class="form-label">EPS</label>
