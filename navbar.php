@@ -15,9 +15,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./views/nuevoempleado.php">Registro empleado</a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
         <a class="nav-link active" aria-current="page" href="./views/calcularSalario.php">Calculo salarios</a>
-        </li>
+        </li>-->
       </ul>
     </div>
   </div>
