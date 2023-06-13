@@ -8,7 +8,7 @@ include '../controller/head.php'
 <body>
 
 <?php
-    include '';
+
     include 'log.php';
     
 ?>

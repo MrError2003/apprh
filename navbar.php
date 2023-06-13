@@ -7,7 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./views/register.php">Registro</a>
+          <a class="nav-link active" aria-current="page" href="./views/registro.php">Registro Usuario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./views/nuevoempleado.php">Registro empleado</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="./views/calcularSalario.php">Calculo salarios</a>
         </li>
       </ul>
     </div>
