@@ -12,8 +12,7 @@
                 <input type="password" class="form-control" name="password" id="exampleInputPassword1">
             </div>
             <button type="submit" class="btn btn-primary" name="iniciar_sesion">Iniciar</button>
-            <button type="submit" class="btn btn-primary" name="iniciar_sesion">Registro</button>
-            
+            <button type="submit" class="btn btn-primary" name="registro" onclick="">Registro</button>
         </form>
 
     </div>
