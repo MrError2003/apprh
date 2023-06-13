@@ -53,10 +53,19 @@
                 <label for="area">Área:</label>
                 <input type="text" class="form-control" id="area" name="area" required>
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="tipocontrato">Tipo de Contrato:</label>
                 <input type="text" class="form-control" id="tipocontrato" name="tipocontrato" required>
-            </div>
+            </div>-->
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione tipo de contrato</option>
+                <option value="Fijo">Termino fijo</option>
+                <option value="Indefinido">Termino indefinido</option>
+                <option value="Obra o labor">Obra o labor</option>
+                <option value="Medio tiempo">Medio tiempo</option>
+                <option value="Practicante">Practicante</option>
+                <option value="Pasantia">Pasantia</option>
+            </select>
             <div class="form-group">
                 <label for="salariobruto">Salario Bruto:</label>
                 <input type="number" class="form-control" id="salariobruto" name="salariobruto" required>
