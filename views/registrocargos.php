@@ -13,19 +13,22 @@
     <div class="container">
         <div class="tab-pane fade" id="register">
             <h3 class="mb-4">Registro cargos</h3>
-
             <?php
             include '../controller/conexion.php';
 
-            if (isset($_POST['registrar'])) {
+            if (isset($_POST['calcular'])) {
+                $salariobruto = $_POST['salariobruto'];
+                $recargos = $_POST['recargos'];
+                $prestaciones = $salariobruto * 0.96;
+                $salarioneto = $salariobruto - $prestaciones + $recargos;
+            } elseif (isset($_POST['registrar'])) {
                 $cargo = $_POST['cargo'];
                 $area = $_POST['area'];
                 $tipocontrato = $_POST['tipocontrato'];
                 $salariobruto = $_POST['salariobruto'];
                 $recargos = $_POST['recargos'];
-                $prestaciones = $salariobruto * 0.96; /*$_POST['prestaciones'];*/
-                $salarioneto = $salariobruto - $prestaciones + $recargos;
-
+                $prestaciones = $_POST['prestaciones'];
+                $salarioneto = $_POST['salarioneto'];
 
                 $insert = mysqli_query($con, "INSERT INTO cargos (cargo, tipocontrato, salariobruto, recargos, prestaciones, salarioneto)
                                    VALUES ('$cargo', '$tipocontrato', '$salariobruto', '$recargos', '$prestaciones', '$salarioneto')");
@@ -71,7 +74,7 @@
             </div>
             <div class="form-group">
                 <label for="prestaciones">Prestaciones:</label>
-                <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo $prestaciones; ?>" readonly>
+                <input type="number" class="form-control" id="prestaciones" name="prestaciones" value="<?php echo isset($prestaciones) ? $prestaciones : ''; ?>" readonly>
             </div>
             <div class="form-group">
                 <label for="recargos">Recargos:</label>
@@ -79,9 +82,10 @@
             </div>
             <div class="form-group">
                 <label for="salarioneto">Salario Neto:</label>
-                <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo $salarioneto; ?>" readonly>
+                <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo isset($salarioneto) ? $salarioneto : ''; ?>" readonly>
             </div>
-            <button type="submit" class="btn btn-primary" name="registrar">Registrar cargo</button>
+            <button type="submit" class="btn btn-primary" name="calcular">Calcular</button>
+            <button type="submit" class="btn btn-success" name="registrar">Registrar cargo</button>
             <br>
             <br>
             <br>
