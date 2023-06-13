@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <div class="container">
     <div class="tab-pane fade" id="register">
       <h3 class="mb-4">Registro cargos</h3>
@@ -71,7 +72,11 @@
         <label for="salarioneto">Salario Neto:</label>
         <input type="number" class="form-control" id="salarioneto" name="salarioneto" required>
       </div>
-      <button type="submit" class="btn btn-primary" name="registrar">Registrar</button>
+      <button type="submit" class="btn btn-primary" name="registrar">Registrar cargo</button>
+      <br>
+      <br>
+      <br>
+
     </form>
   </div>
 
