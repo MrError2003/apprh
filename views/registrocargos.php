@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    
 </head>
 
 <div class="tab-pane fade" id="register">
