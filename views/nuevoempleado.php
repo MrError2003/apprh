@@ -85,6 +85,21 @@
                 <input type="text" class="form-control" id="registerContactphone" placeholder="Tel. Contacto" name="contacto" required>
             </div>
             <div class="mb-3">
+                <label for="registerName" class="form-label">Dirección</label>
+                <br>
+                <input type="text" class="form-control" id="address" placeholder="Dirección de residencia" name="direccion" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Barrio</label>
+                <br>
+                <input type="text" class="form-control" id="neighborhood" placeholder="Barrio" name="barrio" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Municipio o ciudad</label>
+                <br>
+                <input type="text" class="form-control" id="city" placeholder="Lugar de residencia" name="municipiociudad" required>
+            </div>
+            <div class="mb-3">
                 <label for="registerName" class="form-label">EPS</label>
                 <br>
                 <input type="text" class="form-control" id="registerEPS" placeholder="Nombre EPS" name="eps" required>
