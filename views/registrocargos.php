@@ -40,7 +40,6 @@
 
 
 <body>
-    <h2>Registro de Cargos</h2>
     <form method="post" action="registro_cargos_controller.php">
         <div>
             <label for="cargo">Cargo:</label>
