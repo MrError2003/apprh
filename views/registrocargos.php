@@ -23,8 +23,8 @@
                 $tipocontrato = $_POST['tipocontrato'];
                 $salariobruto = $_POST['salariobruto'];
                 $recargos = $_POST['recargos'];
-                $prestaciones = $_POST['prestaciones'];
-                $salarioneto = $salariobruto - $prestaciones + $recargos;
+                $prestaciones = ($salariobruto * 0.96); /*$_POST['prestaciones'];*/
+                $salarioneto = ($salariobruto * $prestaciones) + $recargos;
 
 
                 $insert = mysqli_query($con, "INSERT INTO cargos (cargo, tipocontrato, salariobruto, recargos, prestaciones, salarioneto)
@@ -65,10 +65,10 @@
                 <label for="recargos">Recargos:</label>
                 <input type="number" class="form-control" id="recargos" name="recargos" required>
             </div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label for="prestaciones">Prestaciones:</label>
                 <input type="number" class="form-control" id="prestaciones" name="prestaciones" required>
-            </div>
+            </div>-->
             <div class="form-group">
                 <label for="salarioneto">Salario Neto:</label>
                 <input type="number" class="form-control" id="salarioneto" name="salarioneto" value="<?php echo $salarioneto; ?>" readonly>
