@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<div class="container bg-white py-5">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -132,6 +133,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
