@@ -1,30 +1,41 @@
-<div class="container">
-  <div class="row">
-    <div class="tab-pane fade" id="register">
-      <h3 class="mb-4">Registrarse</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-      <?php
-      include '../controller/conexion.php';
-      if (isset($_POST['registrarse'])) {
-        $identificacion = $_POST['identificacion'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
 
-        $insert = mysqli_query($con, "INSERT INTO usuariosnomina(nombre,identificacion,email,pasword,estado, fechacreacion)
+
+<div class="tab-pane fade" id="register">
+  <h3 class="mb-4">Registrarse</h3>
+
+  <?php
+  include '../controller/conexion.php';
+  if (isset($_POST['registrarse'])) {
+    $identificacion = $_POST['identificacion'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $insert = mysqli_query($con, "INSERT INTO usuariosnomina(nombre,identificacion,email,pasword,estado, fechacreacion)
           VALUES ('$identificacion','$email','$password')");
 
-        if ($insert) {
-          echo '<div class="alert alert-success" role="alert">
+    if ($insert) {
+      echo '<div class="alert alert-success" role="alert">
               DATOS GUARDADOS CON ÉXITO
               <a href="../index.php" class="btn btn-warning">REGRESAR AL INICIO </a>
               </div>';
-        } else {
-          echo "Error al guardar";
-        }
-      }
-      ?>
-    </div>
+    } else {
+      echo "Error al guardar";
+    }
+  }
+  ?>
+</div>
 
+<body>
+  <div class="container">
     <form method="post">
       <div class="mb-3">
         <label for="registerIdentificacion" class="form-label">Identificación</label>
@@ -44,8 +55,10 @@
       </div>
     </form>
   </div>
-</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
