@@ -12,6 +12,11 @@
 <div class="tab-pane fade" id="register">
   <h3 class="mb-4">Registrarse</h3>
 
+
+  <?php
+    include 'login.php';
+  ?>
+
   <?php
   include '../controller/conexion.php';
   if (isset($_POST['registrarse'])) {

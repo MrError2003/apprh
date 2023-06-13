@@ -9,7 +9,7 @@ include '../controller/head.php'
 
 <?php
 
-    include 'log.php';
+    include 'login.php';
     
 ?>
 
